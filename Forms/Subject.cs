@@ -16,8 +16,6 @@ using System.Xml.Linq;
 
 namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
 {
-
-
     public partial class Subject : Form
     {
         public Subject()
@@ -29,13 +27,11 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
 
         ConnectionString connect = new ConnectionString();
 
-
-
         private void LoadSubjects()
         {
             using (SqlConnection con = new SqlConnection(connect.connection))
             {
-                SqlCommand cmd = new SqlCommand("sp_GetSubjectsWithDepartment", con);
+                SqlCommand cmd = new SqlCommand("GetSubjectsWithDepartment", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -47,10 +43,8 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
                 dgvSubjects.Columns["subjectId"].Visible = false;
                 dgvSubjects.Columns["ProgramID"].Visible = false;
                 dgvSubjects.Columns["DepartmentID"].Visible = false;
-
             }
         }
-
         private void Subject_Load_1(object sender, EventArgs e)
         {
             LoadComboBoxes();
@@ -68,51 +62,40 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
                 txtTitle.Text = row.Cells["Title"].Value.ToString();
             }
         }
-
-
-
         private void LoadComboBoxes()
         {
             using (SqlConnection con = new SqlConnection(connect.connection))
             {
-                SqlCommand cmd = new SqlCommand("sp_GetSubjectsWithDepartment", con);
+                SqlCommand cmd = new SqlCommand("GetSubjectsWithDepartment", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // =========================
-                // DEPARTMENT COMBOBOX
-                // =========================
                 DataTable deptTable = dt.DefaultView.ToTable(
-                    true, // DISTINCT
+                    true, 
                     "DepartmentID",
                     "DepartmentName"
                 );
 
                 cmbDepartment.DataSource = deptTable;
-                cmbDepartment.DisplayMember = "DepartmentName"; // what user sees
-                cmbDepartment.ValueMember = "DepartmentID";     // actual value
+                cmbDepartment.DisplayMember = "DepartmentName"; 
+                cmbDepartment.ValueMember = "DepartmentID";     
                 cmbDepartment.SelectedIndex = -1;
 
                 DataTable progTable = dt.DefaultView.ToTable(
-                    true, // DISTINCT
+                    true, 
                     "ProgramID",
                     "ProgramName"
                 );
 
                 cmbProgram.DataSource = progTable;
-                cmbProgram.DisplayMember = "ProgramName"; // what user sees
-                cmbProgram.ValueMember = "ProgramID";     // actual value
+                cmbProgram.DisplayMember = "ProgramName"; 
+                cmbProgram.ValueMember = "ProgramID";    
                 cmbProgram.SelectedIndex = -1;
             }
         }
-
-
-
-
-
         private void btnAddSubject_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrWhiteSpace(txtTitle.Text) || string.IsNullOrWhiteSpace(txtCode.Text) || string.IsNullOrWhiteSpace(txtLectureUnits.Text) 
@@ -120,8 +103,6 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
             {
                 MessageBox.Show("Please fill up all the form", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
             string code = txtCode.Text; 
             string title = txtTitle.Text;
             int departmentId = Convert.ToInt32(cmbDepartment.SelectedValue);
@@ -130,19 +111,8 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
             string laboratoryUnits = txtLaboratoryUnits.Text;
 
             DataClasses1DataContext db =    new DataClasses1DataContext();
-            
-
-
-
-
-
-
-
-
-
         }
-
-        private void btnEditSubject_Click(object sender, EventArgs e)
+        private void btnEditSubject_Click_1(object sender, EventArgs e)
         {
             if (dgvSubjects.CurrentRow == null) return;
 
@@ -159,10 +129,6 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
             string department = cmbDepartment.Text.Trim();
 
             string program = cmbProgram.Text.Trim();
-    
-
-
-
         }
 
         private void btnDeleteSubject_Click(object sender, EventArgs e)

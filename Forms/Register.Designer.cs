@@ -37,7 +37,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblRegisterFaculty = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -122,22 +121,11 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(214, 241);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 42);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 372);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -166,6 +154,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblRegisterFaculty;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
     }
 }

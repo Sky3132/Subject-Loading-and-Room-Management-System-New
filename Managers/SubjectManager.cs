@@ -14,19 +14,14 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
 {
     public class SubjectManager
     {
-
         ConnectionString connect = new ConnectionString();
         
-
         public DataTable GetAllSubjects()
         {
-           
             DataTable dt = new DataTable();
             string query = "SELECT * FROM tblsubject";
-     
-
+    
             using (SqlConnection con = new SqlConnection(connect.connection))
-
             using (SqlDataAdapter adapter = new SqlDataAdapter(query, con))
             {
                 con.Open();
@@ -36,7 +31,6 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
         }
         public bool CodeExists(int code)
         {
-
             string query = "SELECT COUNT(*) FROM tblsubject WHERE Code = @Code";
 
             using (SqlConnection con = new SqlConnection(connect.connection))

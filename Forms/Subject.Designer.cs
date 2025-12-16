@@ -92,6 +92,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
             this.btnEditSubject.TabIndex = 1;
             this.btnEditSubject.Text = "Edit";
             this.btnEditSubject.UseVisualStyleBackColor = false;
+            this.btnEditSubject.Click += new System.EventHandler(this.btnEditSubject_Click_1);
             // 
             // btnAddSubject
             // 
