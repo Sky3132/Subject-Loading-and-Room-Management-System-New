@@ -18,21 +18,26 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE or alter PROCEDURE InsertSubjects 
-    @Code int,
-	@Title nvarchar(50),
-	@Department nvarchar(50),
-	@Program nvarchar(50),
-	@LectureUnits int,
-	@LaboratoryUnits int,
-	@DepartmentID int
+CREATE OR ALTER PROCEDURE sp_GetSubjectsWithDepartment
 AS
 BEGIN
-	insert into tblsubject (Code, Title, DepartmentID)
-	values (@Code, @Title, @DepartmentID);
+    SET NOCOUNT ON;
 
-
-	insert into tblDepartmentAndProgram(Department)
-	values (@Department, @Program, @LectureUnits, @LaboratoryUnits);
+    SELECT DISTINCT
+        d.DepartmentID,
+        d.DepartmentName,
+        p.ProgramID,
+        p.ProgramName,
+        s.subjectId,
+        s.Code,
+        s.Title,
+        s.LectureUnits,
+        s.LaboratoryUnits
+    FROM tblDepartment d
+   FULL OUTER JOIN tblProgram p
+        ON d.ProgramID = p.ProgramID
+    FULL OUTER JOIN tblsubject s
+        ON s.DepartmentID = d.DepartmentID;
 END
-GO              
+GO
+
