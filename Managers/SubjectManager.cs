@@ -14,13 +14,19 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
 {
     public class SubjectManager
     {
-        string connectionString = @"Data Source=DESKTOP-RFR1DK9;Initial Catalog=Schooldb;Integrated Security=True;";
+
+        ConnectionString connect = new ConnectionString();
+        
+
         public DataTable GetAllSubjects()
         {
+           
             DataTable dt = new DataTable();
-            string query = "SELECT * FROM tblsubject"; 
+            string query = "SELECT * FROM tblsubject";
+     
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
+
             using (SqlDataAdapter adapter = new SqlDataAdapter(query, con))
             {
                 con.Open();
@@ -30,9 +36,10 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
         }
         public bool CodeExists(int code)
         {
+
             string query = "SELECT COUNT(*) FROM tblsubject WHERE Code = @Code";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
                 cmd.Parameters.AddWithValue("@Code", code);
@@ -48,7 +55,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
 
             string query = "INSERT INTO tblsubject (Code, Title, Units, Department, Program) VALUES (@Code, @Title, @Units, @Department, @Program)";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
                 cmd.Parameters.AddWithValue("@Code", code);
@@ -67,7 +74,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
         {
             string queryCheck = "SELECT COUNT(*) FROM tblsubject WHERE Code = @Code AND subjectId <> @subjectId";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmdCheck = new SqlCommand(queryCheck, con))
             {
                 cmdCheck.Parameters.AddWithValue("@Code", code);
@@ -80,7 +87,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
 
             string queryUpdate = "UPDATE tblsubject SET Code=@Code, Title=@Title, Units=@Units, Department=@Department, Program=@Program WHERE subjectId=@subjectId";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmdUpdate = new SqlCommand(queryUpdate, con))
             {
                 cmdUpdate.Parameters.AddWithValue("@subjectId", id);
@@ -100,7 +107,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
         {
             string queryDelete = "DELETE FROM tblsubject WHERE subjectId=@subjectId";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmdDelete = new SqlCommand(queryDelete, con))
             {
                 cmdDelete.Parameters.AddWithValue("@subjectId", id);
@@ -114,7 +121,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
         {
             string query = "SELECT subjectId, Code, Title FROM tblsubject";
 
-           using (SqlConnection con = new SqlConnection(connectionString))
+           using (SqlConnection con = new SqlConnection(connect.connection))
            using (SqlDataAdapter da = new SqlDataAdapter(query, con))
             {
                 DataTable dt = new DataTable();
@@ -134,7 +141,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
             DataTable dt = new DataTable();
             string spName = "GetAllSubjectOfferings";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmd = new SqlCommand(spName, con))
             using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
             {
@@ -155,7 +162,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
         {
             string spName = "UpdateSubjectOffering";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmd = new SqlCommand(spName, con))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -176,7 +183,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Managers
         {
             string spName = "DeleteSubjectOffering";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new SqlConnection(connect.connection))
             using (SqlCommand cmd = new SqlCommand(spName, con))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -206,7 +213,7 @@ public DataTable GetOfferingsByFilter(string semester, string schoolYear)
             (@Semester = '' OR so.Semester = @Semester) 
             AND (@SchoolYear = '' OR so.SchoolYear = @SchoolYear)";
 
-    using (SqlConnection con = new SqlConnection(connectionString))
+    using (SqlConnection con = new SqlConnection(connect.connection))
     using (SqlCommand cmd = new SqlCommand(query, con))
     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
     {

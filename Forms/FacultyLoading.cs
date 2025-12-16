@@ -26,5 +26,10 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System.Forms
         {
 
         }
+
+        private void btnAddLoad_Click(object sender, EventArgs e)
+        {
+         
+        }
     }
 }

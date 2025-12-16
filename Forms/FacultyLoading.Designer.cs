@@ -201,6 +201,7 @@
             this.btnAddLoad.TabIndex = 12;
             this.btnAddLoad.Text = "Add";
             this.btnAddLoad.UseVisualStyleBackColor = false;
+            this.btnAddLoad.Click += new System.EventHandler(this.btnAddLoad_Click);
             // 
             // FacultyLoading
             // 

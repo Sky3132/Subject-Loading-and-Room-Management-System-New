@@ -1,70 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|c:\\users\\qhtf\\source\\repos\\subject-twila\\subject loading and room assignment monitoring system\\managers\\subjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:managers\\subjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\forms\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\subjectoffering.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subjectoffering.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\dataclasses1.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:dataclasses1.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\subject.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subject.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\managers\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\managers\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:managers\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|c:\\users\\admin\\source\\repos\\subject-loading-and-room-management-system-new\\forms\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\facultyloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\facultyloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|c:\\users\\admin\\source\\repos\\subject-loading-and-room-management-system-new\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\facultyloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\facultyloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|c:\\users\\admin\\source\\repos\\subject-loading-and-room-management-system-new\\forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\forms\\main.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\main.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\forms\\facultyloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\facultyloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\forms\\subjectoffering.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subjectoffering.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\dataclasses1.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:dataclasses1.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\managers\\subjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:managers\\subjectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\subjectoffering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{402CCFEC-F201-4EDE-9944-80D1A553F04F}|\u2705 Subject Loading and Room Assignment Monitoring System.csproj|solutionrelative:forms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,199 +58,160 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SubjectOffering.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\SubjectOffering.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\SubjectOffering.cs",
               "RelativeDocumentMoniker": "Forms\\SubjectOffering.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\SubjectOffering.cs [Design]",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\SubjectOffering.cs [Design]",
               "RelativeToolTip": "Forms\\SubjectOffering.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:24:06.99Z",
+              "WhenOpened": "2025-12-16T14:17:39.757Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SubjectOffering.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\SubjectOffering.cs",
-              "RelativeDocumentMoniker": "Forms\\SubjectOffering.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\SubjectOffering.cs",
-              "RelativeToolTip": "Forms\\SubjectOffering.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAjwHAAAAAQAAAAAAAAAA==",
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Login.cs",
+              "RelativeDocumentMoniker": "Forms\\Login.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Login.cs [Design]",
+              "RelativeToolTip": "Forms\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:24:29.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T12:39:35.277Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SubjectManager.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Managers\\SubjectManager.cs",
-              "RelativeDocumentMoniker": "Managers\\SubjectManager.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Managers\\SubjectManager.cs",
-              "RelativeToolTip": "Managers\\SubjectManager.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwBQAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:53:51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Subject.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Subject.Designer.cs",
-              "RelativeDocumentMoniker": "Forms\\Subject.Designer.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Subject.Designer.cs",
-              "RelativeToolTip": "Forms\\Subject.Designer.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAASwGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:51:55.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Subject.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Subject.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Subject.cs",
               "RelativeDocumentMoniker": "Forms\\Subject.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Subject.cs [Design]",
-              "RelativeToolTip": "Forms\\Subject.cs [Design]",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Subject.cs [Design]*",
+              "RelativeToolTip": "Forms\\Subject.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T13:03:00.34Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DataClasses1.dbml",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\DataClasses1.dbml",
-              "RelativeDocumentMoniker": "DataClasses1.dbml",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\DataClasses1.dbml",
-              "RelativeToolTip": "DataClasses1.dbml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
-              "WhenOpened": "2025-12-02T13:02:51.503Z"
+              "DocumentIndex": 10,
+              "Title": "SubjectOffering.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\SubjectOffering.cs",
+              "RelativeDocumentMoniker": "Forms\\SubjectOffering.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\SubjectOffering.cs",
+              "RelativeToolTip": "Forms\\SubjectOffering.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAUwHAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T13:24:29.732Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
+              "Title": "SubjectManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Managers\\SubjectManager.cs",
+              "RelativeDocumentMoniker": "Managers\\SubjectManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Managers\\SubjectManager.cs",
+              "RelativeToolTip": "Managers\\SubjectManager.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T13:53:51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataClasses1.dbml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\DataClasses1.dbml",
+              "RelativeDocumentMoniker": "DataClasses1.dbml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\DataClasses1.dbml",
+              "RelativeToolTip": "DataClasses1.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2025-12-02T13:02:51.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SubjectOffering.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\SubjectOffering.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\SubjectOffering.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\SubjectOffering.Designer.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\SubjectOffering.Designer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\SubjectOffering.Designer.cs",
               "RelativeToolTip": "Forms\\SubjectOffering.Designer.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAkwKwAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T13:32:20.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Subject.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Subject.cs",
               "RelativeDocumentMoniker": "Forms\\Subject.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Subject.cs",
-              "RelativeToolTip": "Forms\\Subject.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAcwEwAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Subject.cs*",
+              "RelativeToolTip": "Forms\\Subject.cs*",
+              "ViewState": "AgIAAGkAAAAAAAAAAADwv38AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T13:26:38.05Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "Models\\Subject.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Models\\Subject.cs",
-              "RelativeToolTip": "Models\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:21:04.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:07:07.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "UserManager.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Managers\\UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Managers\\UserManager.cs",
               "RelativeDocumentMoniker": "Managers\\UserManager.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Managers\\UserManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Managers\\UserManager.cs",
               "RelativeToolTip": "Managers\\UserManager.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwCwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T17:49:35.774Z"
+              "WhenOpened": "2025-12-02T17:49:35.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FacultyLoading.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\FacultyLoading.cs",
+              "RelativeDocumentMoniker": "Forms\\FacultyLoading.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\FacultyLoading.cs [Design]",
+              "RelativeToolTip": "Forms\\FacultyLoading.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T13:18:01.338Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Register.cs",
+              "RelativeDocumentMoniker": "Forms\\Register.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Register.cs [Design]",
+              "RelativeToolTip": "Forms\\Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T13:02:59.371Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "FacultyLoading.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\FacultyLoading.cs",
-              "RelativeDocumentMoniker": "Forms\\FacultyLoading.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\FacultyLoading.cs [Design]",
-              "RelativeToolTip": "Forms\\FacultyLoading.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:18:01.338Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FacultyLoading.cs",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\FacultyLoading.cs",
-              "RelativeDocumentMoniker": "Forms\\FacultyLoading.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\FacultyLoading.cs",
-              "RelativeToolTip": "Forms\\FacultyLoading.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAjwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:19:38.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Register.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Register.cs",
-              "RelativeDocumentMoniker": "Forms\\Register.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Register.cs [Design]",
-              "RelativeToolTip": "Forms\\Register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:02:59.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "Main.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Main.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Main.cs",
               "RelativeDocumentMoniker": "Forms\\Main.cs",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Main.cs [Design]",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Subject-Loading-and-Room-Management-System-New\\Forms\\Main.cs [Design]",
               "RelativeToolTip": "Forms\\Main.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:02:57.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Main.resx",
-              "DocumentMoniker": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Main.resx",
-              "RelativeDocumentMoniker": "Forms\\Main.resx",
-              "ToolTip": "C:\\Users\\QHTF\\source\\repos\\SUBJECT-TWILA\\Subject Loading and Room Assignment Monitoring System\\Forms\\Main.resx",
-              "RelativeToolTip": "Forms\\Main.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-12-02T13:03:39.707Z"
+              "WhenOpened": "2025-12-02T13:02:57.685Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

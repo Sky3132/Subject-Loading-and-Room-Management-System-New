@@ -36,6 +36,12 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
     partial void Insertregister(register instance);
     partial void Updateregister(register instance);
     partial void Deleteregister(register instance);
+    partial void InserttblDepartment(tblDepartment instance);
+    partial void UpdatetblDepartment(tblDepartment instance);
+    partial void DeletetblDepartment(tblDepartment instance);
+    partial void InserttblProgram(tblProgram instance);
+    partial void UpdatetblProgram(tblProgram instance);
+    partial void DeletetblProgram(tblProgram instance);
     partial void Inserttblsubject(tblsubject instance);
     partial void Updatetblsubject(tblsubject instance);
     partial void Deletetblsubject(tblsubject instance);
@@ -45,7 +51,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::@__Subject_Loading_and_Room_Assignment_Monitoring_System.Properties.Settings.Default.SchooldbConnectionString, mappingSource)
+				base(global::@__Subject_Loading_and_Room_Assignment_Monitoring_System.Properties.Settings.Default.SchooldbConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -87,6 +93,22 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			get
 			{
 				return this.GetTable<register>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblDepartment> tblDepartments
+		{
+			get
+			{
+				return this.GetTable<tblDepartment>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tblProgram> tblPrograms
+		{
+			get
+			{
+				return this.GetTable<tblProgram>();
 			}
 		}
 		
@@ -147,6 +169,13 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), code, title, units, department, program);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_GetSubjectsWithDepartment")]
+		public ISingleResult<sp_GetSubjectsWithDepartmentResult> sp_GetSubjectsWithDepartment()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<sp_GetSubjectsWithDepartmentResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.log_in")]
@@ -178,7 +207,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -288,7 +317,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -369,6 +398,299 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblDepartment")]
+	public partial class tblDepartment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DepartmentID;
+		
+		private string _DepartmentName;
+		
+		private int _ProgramID;
+		
+		private EntitySet<tblsubject> _tblsubjects;
+		
+		private EntityRef<tblProgram> _tblProgram;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDepartmentIDChanging(int value);
+    partial void OnDepartmentIDChanged();
+    partial void OnDepartmentNameChanging(string value);
+    partial void OnDepartmentNameChanged();
+    partial void OnProgramIDChanging(int value);
+    partial void OnProgramIDChanged();
+    #endregion
+		
+		public tblDepartment()
+		{
+			this._tblsubjects = new EntitySet<tblsubject>(new Action<tblsubject>(this.attach_tblsubjects), new Action<tblsubject>(this.detach_tblsubjects));
+			this._tblProgram = default(EntityRef<tblProgram>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int DepartmentID
+		{
+			get
+			{
+				return this._DepartmentID;
+			}
+			set
+			{
+				if ((this._DepartmentID != value))
+				{
+					this.OnDepartmentIDChanging(value);
+					this.SendPropertyChanging();
+					this._DepartmentID = value;
+					this.SendPropertyChanged("DepartmentID");
+					this.OnDepartmentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string DepartmentName
+		{
+			get
+			{
+				return this._DepartmentName;
+			}
+			set
+			{
+				if ((this._DepartmentName != value))
+				{
+					this.OnDepartmentNameChanging(value);
+					this.SendPropertyChanging();
+					this._DepartmentName = value;
+					this.SendPropertyChanged("DepartmentName");
+					this.OnDepartmentNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProgramID", DbType="Int NOT NULL")]
+		public int ProgramID
+		{
+			get
+			{
+				return this._ProgramID;
+			}
+			set
+			{
+				if ((this._ProgramID != value))
+				{
+					if (this._tblProgram.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProgramIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProgramID = value;
+					this.SendPropertyChanged("ProgramID");
+					this.OnProgramIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblDepartment_tblsubject", Storage="_tblsubjects", ThisKey="DepartmentID", OtherKey="DepartmentID")]
+		public EntitySet<tblsubject> tblsubjects
+		{
+			get
+			{
+				return this._tblsubjects;
+			}
+			set
+			{
+				this._tblsubjects.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblProgram_tblDepartment", Storage="_tblProgram", ThisKey="ProgramID", OtherKey="ProgramID", IsForeignKey=true)]
+		public tblProgram tblProgram
+		{
+			get
+			{
+				return this._tblProgram.Entity;
+			}
+			set
+			{
+				tblProgram previousValue = this._tblProgram.Entity;
+				if (((previousValue != value) 
+							|| (this._tblProgram.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblProgram.Entity = null;
+						previousValue.tblDepartments.Remove(this);
+					}
+					this._tblProgram.Entity = value;
+					if ((value != null))
+					{
+						value.tblDepartments.Add(this);
+						this._ProgramID = value.ProgramID;
+					}
+					else
+					{
+						this._ProgramID = default(int);
+					}
+					this.SendPropertyChanged("tblProgram");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tblsubjects(tblsubject entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblDepartment = this;
+		}
+		
+		private void detach_tblsubjects(tblsubject entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblDepartment = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblProgram")]
+	public partial class tblProgram : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ProgramID;
+		
+		private string _ProgramName;
+		
+		private EntitySet<tblDepartment> _tblDepartments;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnProgramIDChanging(int value);
+    partial void OnProgramIDChanged();
+    partial void OnProgramNameChanging(string value);
+    partial void OnProgramNameChanged();
+    #endregion
+		
+		public tblProgram()
+		{
+			this._tblDepartments = new EntitySet<tblDepartment>(new Action<tblDepartment>(this.attach_tblDepartments), new Action<tblDepartment>(this.detach_tblDepartments));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProgramID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ProgramID
+		{
+			get
+			{
+				return this._ProgramID;
+			}
+			set
+			{
+				if ((this._ProgramID != value))
+				{
+					this.OnProgramIDChanging(value);
+					this.SendPropertyChanging();
+					this._ProgramID = value;
+					this.SendPropertyChanged("ProgramID");
+					this.OnProgramIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProgramName", DbType="NVarChar(50)")]
+		public string ProgramName
+		{
+			get
+			{
+				return this._ProgramName;
+			}
+			set
+			{
+				if ((this._ProgramName != value))
+				{
+					this.OnProgramNameChanging(value);
+					this.SendPropertyChanging();
+					this._ProgramName = value;
+					this.SendPropertyChanged("ProgramName");
+					this.OnProgramNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblProgram_tblDepartment", Storage="_tblDepartments", ThisKey="ProgramID", OtherKey="ProgramID")]
+		public EntitySet<tblDepartment> tblDepartments
+		{
+			get
+			{
+				return this._tblDepartments;
+			}
+			set
+			{
+				this._tblDepartments.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tblDepartments(tblDepartment entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblProgram = this;
+		}
+		
+		private void detach_tblDepartments(tblDepartment entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblProgram = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblsubject")]
 	public partial class tblsubject : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -377,17 +699,19 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 		
 		private int _subjectId;
 		
-		private System.Nullable<int> _Code;
+		private int _Code;
 		
 		private string _Title;
 		
-		private System.Nullable<int> _Units;
+		private int _LectureUnits;
 		
-		private string _Department;
+		private int _LaboratoryUnits;
 		
-		private string _Program;
+		private int _DepartmentID;
 		
 		private EntitySet<tblsubjectOffering> _tblsubjectOfferings;
+		
+		private EntityRef<tblDepartment> _tblDepartment;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -395,21 +719,22 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
     partial void OnCreated();
     partial void OnsubjectIdChanging(int value);
     partial void OnsubjectIdChanged();
-    partial void OnCodeChanging(System.Nullable<int> value);
+    partial void OnCodeChanging(int value);
     partial void OnCodeChanged();
     partial void OnTitleChanging(string value);
     partial void OnTitleChanged();
-    partial void OnUnitsChanging(System.Nullable<int> value);
-    partial void OnUnitsChanged();
-    partial void OnDepartmentChanging(string value);
-    partial void OnDepartmentChanged();
-    partial void OnProgramChanging(string value);
-    partial void OnProgramChanged();
+    partial void OnLectureUnitsChanging(int value);
+    partial void OnLectureUnitsChanged();
+    partial void OnLaboratoryUnitsChanging(int value);
+    partial void OnLaboratoryUnitsChanged();
+    partial void OnDepartmentIDChanging(int value);
+    partial void OnDepartmentIDChanged();
     #endregion
 		
 		public tblsubject()
 		{
 			this._tblsubjectOfferings = new EntitySet<tblsubjectOffering>(new Action<tblsubjectOffering>(this.attach_tblsubjectOfferings), new Action<tblsubjectOffering>(this.detach_tblsubjectOfferings));
+			this._tblDepartment = default(EntityRef<tblDepartment>);
 			OnCreated();
 		}
 		
@@ -433,8 +758,8 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="Int")]
-		public System.Nullable<int> Code
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="Int NOT NULL")]
+		public int Code
 		{
 			get
 			{
@@ -453,7 +778,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Title
 		{
 			get
@@ -473,62 +798,66 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Units", DbType="Int")]
-		public System.Nullable<int> Units
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LectureUnits", DbType="Int NOT NULL")]
+		public int LectureUnits
 		{
 			get
 			{
-				return this._Units;
+				return this._LectureUnits;
 			}
 			set
 			{
-				if ((this._Units != value))
+				if ((this._LectureUnits != value))
 				{
-					this.OnUnitsChanging(value);
+					this.OnLectureUnitsChanging(value);
 					this.SendPropertyChanging();
-					this._Units = value;
-					this.SendPropertyChanged("Units");
-					this.OnUnitsChanged();
+					this._LectureUnits = value;
+					this.SendPropertyChanged("LectureUnits");
+					this.OnLectureUnitsChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Department", DbType="NVarChar(50)")]
-		public string Department
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LaboratoryUnits", DbType="Int NOT NULL")]
+		public int LaboratoryUnits
 		{
 			get
 			{
-				return this._Department;
+				return this._LaboratoryUnits;
 			}
 			set
 			{
-				if ((this._Department != value))
+				if ((this._LaboratoryUnits != value))
 				{
-					this.OnDepartmentChanging(value);
+					this.OnLaboratoryUnitsChanging(value);
 					this.SendPropertyChanging();
-					this._Department = value;
-					this.SendPropertyChanged("Department");
-					this.OnDepartmentChanged();
+					this._LaboratoryUnits = value;
+					this.SendPropertyChanged("LaboratoryUnits");
+					this.OnLaboratoryUnitsChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Program", DbType="NVarChar(50)")]
-		public string Program
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", DbType="Int NOT NULL")]
+		public int DepartmentID
 		{
 			get
 			{
-				return this._Program;
+				return this._DepartmentID;
 			}
 			set
 			{
-				if ((this._Program != value))
+				if ((this._DepartmentID != value))
 				{
-					this.OnProgramChanging(value);
+					if (this._tblDepartment.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDepartmentIDChanging(value);
 					this.SendPropertyChanging();
-					this._Program = value;
-					this.SendPropertyChanged("Program");
-					this.OnProgramChanged();
+					this._DepartmentID = value;
+					this.SendPropertyChanged("DepartmentID");
+					this.OnDepartmentIDChanged();
 				}
 			}
 		}
@@ -543,6 +872,40 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			set
 			{
 				this._tblsubjectOfferings.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblDepartment_tblsubject", Storage="_tblDepartment", ThisKey="DepartmentID", OtherKey="DepartmentID", IsForeignKey=true)]
+		public tblDepartment tblDepartment
+		{
+			get
+			{
+				return this._tblDepartment.Entity;
+			}
+			set
+			{
+				tblDepartment previousValue = this._tblDepartment.Entity;
+				if (((previousValue != value) 
+							|| (this._tblDepartment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblDepartment.Entity = null;
+						previousValue.tblsubjects.Remove(this);
+					}
+					this._tblDepartment.Entity = value;
+					if ((value != null))
+					{
+						value.tblsubjects.Add(this);
+						this._DepartmentID = value.DepartmentID;
+					}
+					else
+					{
+						this._DepartmentID = default(int);
+					}
+					this.SendPropertyChanged("tblDepartment");
+				}
 			}
 		}
 		
@@ -591,7 +954,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 		
 		private string _SchoolYear;
 		
-		private System.Nullable<int> _subjectId;
+		private int _subjectId;
 		
 		private EntityRef<tblsubject> _tblsubject;
 		
@@ -605,7 +968,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
     partial void OnSemesterChanged();
     partial void OnSchoolYearChanging(string value);
     partial void OnSchoolYearChanged();
-    partial void OnsubjectIdChanging(System.Nullable<int> value);
+    partial void OnsubjectIdChanging(int value);
     partial void OnsubjectIdChanged();
     #endregion
 		
@@ -635,7 +998,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Semester", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Semester", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Semester
 		{
 			get
@@ -655,7 +1018,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SchoolYear", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SchoolYear", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string SchoolYear
 		{
 			get
@@ -675,8 +1038,8 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subjectId", DbType="Int")]
-		public System.Nullable<int> subjectId
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subjectId", DbType="Int NOT NULL")]
+		public int subjectId
 		{
 			get
 			{
@@ -726,7 +1089,7 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 					}
 					else
 					{
-						this._subjectId = default(Nullable<int>);
+						this._subjectId = default(int);
 					}
 					this.SendPropertyChanged("tblsubject");
 				}
@@ -865,6 +1228,176 @@ namespace @__Subject_Loading_and_Room_Assignment_Monitoring_System
 				if ((this._Title != value))
 				{
 					this._Title = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_GetSubjectsWithDepartmentResult
+	{
+		
+		private System.Nullable<int> _DepartmentID;
+		
+		private string _DepartmentName;
+		
+		private System.Nullable<int> _ProgramID;
+		
+		private string _ProgramName;
+		
+		private System.Nullable<int> _subjectId;
+		
+		private System.Nullable<int> _Code;
+		
+		private string _Title;
+		
+		private System.Nullable<int> _LectureUnits;
+		
+		private System.Nullable<int> _LaboratoryUnits;
+		
+		public sp_GetSubjectsWithDepartmentResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentID", DbType="Int")]
+		public System.Nullable<int> DepartmentID
+		{
+			get
+			{
+				return this._DepartmentID;
+			}
+			set
+			{
+				if ((this._DepartmentID != value))
+				{
+					this._DepartmentID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentName", DbType="NVarChar(50)")]
+		public string DepartmentName
+		{
+			get
+			{
+				return this._DepartmentName;
+			}
+			set
+			{
+				if ((this._DepartmentName != value))
+				{
+					this._DepartmentName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProgramID", DbType="Int")]
+		public System.Nullable<int> ProgramID
+		{
+			get
+			{
+				return this._ProgramID;
+			}
+			set
+			{
+				if ((this._ProgramID != value))
+				{
+					this._ProgramID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProgramName", DbType="NVarChar(50)")]
+		public string ProgramName
+		{
+			get
+			{
+				return this._ProgramName;
+			}
+			set
+			{
+				if ((this._ProgramName != value))
+				{
+					this._ProgramName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subjectId", DbType="Int")]
+		public System.Nullable<int> subjectId
+		{
+			get
+			{
+				return this._subjectId;
+			}
+			set
+			{
+				if ((this._subjectId != value))
+				{
+					this._subjectId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="Int")]
+		public System.Nullable<int> Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this._Code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(50)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LectureUnits", DbType="Int")]
+		public System.Nullable<int> LectureUnits
+		{
+			get
+			{
+				return this._LectureUnits;
+			}
+			set
+			{
+				if ((this._LectureUnits != value))
+				{
+					this._LectureUnits = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LaboratoryUnits", DbType="Int")]
+		public System.Nullable<int> LaboratoryUnits
+		{
+			get
+			{
+				return this._LaboratoryUnits;
+			}
+			set
+			{
+				if ((this._LaboratoryUnits != value))
+				{
+					this._LaboratoryUnits = value;
 				}
 			}
 		}

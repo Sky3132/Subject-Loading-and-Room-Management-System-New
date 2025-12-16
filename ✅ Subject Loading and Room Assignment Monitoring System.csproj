@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ConnectionString.cs" />
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,7 +80,6 @@
     </Compile>
     <Compile Include="Managers\SubjectManager.cs" />
     <Compile Include="Managers\UserManager.cs" />
-    <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Forms\Register.cs">
       <SubType>Form</SubType>
@@ -93,8 +93,9 @@
     <Compile Include="Forms\Subject.Designer.cs">
       <DependentUpon>Subject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Models\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Subjects.cs" />
     <EmbeddedResource Include="Forms\FacultyLoading.resx">
       <DependentUpon>FacultyLoading.cs</DependentUpon>
     </EmbeddedResource>

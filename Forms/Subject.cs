@@ -16,6 +16,8 @@ using System.Xml.Linq;
 
 namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
 {
+
+
     public partial class Subject : Form
     {
         public Subject()
@@ -23,16 +25,37 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
             InitializeComponent();
         }
 
-        string connectionString = "Data Source=DESKTOP-RFR1DK9;Initial Catalog=Schooldb;Integrated Security=True;";
         private SubjectManager subjectManager = new SubjectManager();
 
-        private void LoadingSubject()
+        ConnectionString connect = new ConnectionString();
+
+
+
+        private void LoadSubjects()
         {
-            dgvSubjects.DataSource = subjectManager.GetAllSubjects();
+            using (SqlConnection con = new SqlConnection(connect.connection))
+            {
+                SqlCommand cmd = new SqlCommand("sp_GetSubjectsWithDepartment", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvSubjects.DataSource = dt;
+
+                dgvSubjects.Columns["subjectId"].Visible = false;
+                dgvSubjects.Columns["ProgramID"].Visible = false;
+                dgvSubjects.Columns["DepartmentID"].Visible = false;
+
+            }
         }
+
         private void Subject_Load_1(object sender, EventArgs e)
         {
-            LoadingSubject();
+            LoadComboBoxes();
+            LoadSubjects();
+
             dgvSubjects.Columns["subjectId"].Visible = false;
         }
 
@@ -45,41 +68,78 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
                 txtTitle.Text = row.Cells["Title"].Value.ToString();
             }
         }
+
+
+
+        private void LoadComboBoxes()
+        {
+            using (SqlConnection con = new SqlConnection(connect.connection))
+            {
+                SqlCommand cmd = new SqlCommand("sp_GetSubjectsWithDepartment", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // =========================
+                // DEPARTMENT COMBOBOX
+                // =========================
+                DataTable deptTable = dt.DefaultView.ToTable(
+                    true, // DISTINCT
+                    "DepartmentID",
+                    "DepartmentName"
+                );
+
+                cmbDepartment.DataSource = deptTable;
+                cmbDepartment.DisplayMember = "DepartmentName"; // what user sees
+                cmbDepartment.ValueMember = "DepartmentID";     // actual value
+                cmbDepartment.SelectedIndex = -1;
+
+                DataTable progTable = dt.DefaultView.ToTable(
+                    true, // DISTINCT
+                    "ProgramID",
+                    "ProgramName"
+                );
+
+                cmbProgram.DataSource = progTable;
+                cmbProgram.DisplayMember = "ProgramName"; // what user sees
+                cmbProgram.ValueMember = "ProgramID";     // actual value
+                cmbProgram.SelectedIndex = -1;
+            }
+        }
+
+
+
+
+
         private void btnAddSubject_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtCode.Text.Trim(), out int code))
+            if(string.IsNullOrWhiteSpace(txtTitle.Text) || string.IsNullOrWhiteSpace(txtCode.Text) || string.IsNullOrWhiteSpace(txtLectureUnits.Text) 
+                || string.IsNullOrWhiteSpace(txtLaboratoryUnits.Text))
             {
-                MessageBox.Show("Code must be a number.");
-                return;
+                MessageBox.Show("Please fill up all the form", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            string title = txtTitle.Text.Trim();
-            if (string.IsNullOrEmpty(title))
-            {
-                MessageBox.Show("Please enter Title.");
-                return;
-            }
 
-            if (!int.TryParse(txtUnits.Text.Trim(), out int units))
-            {
-                MessageBox.Show("Units must be a number.");
-                return;
-            }
+            string code = txtCode.Text; 
+            string title = txtTitle.Text;
+            int departmentId = Convert.ToInt32(cmbDepartment.SelectedValue);
+            int programID = Convert.ToInt32(cmbProgram.SelectedValue);
+            string lectureUnits = txtLectureUnits.Text;
+            string laboratoryUnits = txtLaboratoryUnits.Text;
 
-            string department = txtDepartment.Text.Trim();
-            string program = txtProgram.Text.Trim();
+            DataClasses1DataContext db =    new DataClasses1DataContext();
+            
 
-            bool added = subjectManager.AddSubject(code, title, units, department, program);
 
-            if (added)
-            {
-                MessageBox.Show("Subject added successfully!");
-                LoadingSubject();
-            }
-            else
-            {
-                MessageBox.Show("This Code already exists!");
-            }
+
+
+
+
+
+
+
         }
 
         private void btnEditSubject_Click(object sender, EventArgs e)
@@ -95,43 +155,14 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
             }
 
             string title = txtTitle.Text.Trim();
-            if (string.IsNullOrWhiteSpace(title))
-            {
-                MessageBox.Show("Please enter Title.");
-                return;
-            }
+  
+            string department = cmbDepartment.Text.Trim();
 
-            if (!int.TryParse(txtUnits.Text.Trim(), out int units))
-            {
-                MessageBox.Show("Units must be a number.");
-                return;
-            }
+            string program = cmbProgram.Text.Trim();
+    
 
-            string department = txtDepartment.Text.Trim();
-            if (string.IsNullOrWhiteSpace(department))
-            {
-                MessageBox.Show("Please enter Department.");
-                return;
-            }
 
-            string program = txtProgram.Text.Trim();
-            if (string.IsNullOrWhiteSpace(program))
-            {
-                MessageBox.Show("Please enter Program.");
-                return;
-            }
 
-            bool updated = subjectManager.UpdateSubject(id, code, title, units, department, program);
-
-            if (updated)
-            {
-                MessageBox.Show("Subject updated successfully!");
-                LoadingSubject();
-            }
-            else
-            {
-                MessageBox.Show("This Code already exists!");
-            }
         }
 
         private void btnDeleteSubject_Click(object sender, EventArgs e)
@@ -149,7 +180,7 @@ namespace __Subject_Loading_and_Room_Assignment_Monitoring_System
             if (deleted)
             {
                 MessageBox.Show("Deleted Successfully");
-                LoadingSubject();
+                LoadSubjects();
             }
         }
         
